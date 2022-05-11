@@ -1,5 +1,6 @@
 <script>
 import {nextTick, ref} from 'vue';
+import useNow from '@/SharedComponents/useNow';
 
 const ViaProp = {
   props: ['value'],
@@ -10,19 +11,11 @@ const ViaProp = {
 export default {
   components: {ViaProp},
   setup() {
-    const counter = ref(0)
-    setInterval(() => {
-      counter.value++
-      nextTick(() => {
-        console.clear()
-        console.log('_createVNode', window._createVNodeCtr)
-        console.log('cloneVNode', window.cloneVNodeCtr)
-      })
-    }, 1000)
+    const now = useNow()
     return () => (
         <div>
           <div>
-            <via-prop value={counter.value}/>
+            <via-prop value={now.value}/>
           </div>
           <div>JSX_Static</div>
         </div>
