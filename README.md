@@ -33,6 +33,6 @@ function cloneVNode(vnode, extraProps, mergeRef = false) {
 }
 ```
 
-2. Goto `/src/main.js`, uncomment each app (App1.vue, App2.vue) and open browser
+2. Goto `/src/main.js`, uncomment each app (App1.vue, App2.vue, App3.vue) and open browser
 
 DEMO: https://www.youtube.com/watch?v=RC9lKbv88qQ
