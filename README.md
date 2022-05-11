@@ -13,7 +13,7 @@ npm run serve
 ### Testing performance
 1. Inject log to VueJs runtime core
 
-Goto `/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js` then:
+Goto `/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js` for `serve` mode or `/node_modules/@vue/runtime-core/dist/runtime-core.cjs.prod.js` for `build` mode then:
 
 Add `window._createVNodeCtr++` to `_createVNode` function.
 ```javascript
